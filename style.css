@@ -1,0 +1,374 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex: 1;
+    flex-flow: column;
+    align-items: center;
+    margin: 0;
+}
+
+.newspaper {
+    margin: 0 auto;
+    padding: 16px;
+    background: no-repeat  url("resources/background.jpg") center/cover ;
+}
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.special-issue, .text-overlay {
+    flex-basis: 25%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 20px 0;
+}
+
+.logo-container {
+    flex-grow: 1;
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+
+.subheader {
+    min-height: 90px;
+    display: flex;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.subheader img {
+    width: 100px;
+    height: 90px;
+}
+
+.subheader h1 {
+    font-size: 58px;
+    margin: 0;
+    text-align: center;
+    width: auto;
+    font-family: "ru_Pixel", sans-serif;
+}
+
+@font-face {
+    font-family: 'ru_Pixel';
+    src: url('resources/ofont.ru_Pixel Cyr.ttf') format('truetype');
+}
+
+
+.main-content p{
+    margin: 0;
+}
+
+.robot-combat, .robot-concierge {
+    display: flex;
+    justify-content: space-between;
+    margin: 8px 0;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+.robot-combat > *,
+.robot-concierge > *{
+    width: 179px;
+    background: rgba(0, 0, 0, 0.1);
+    text-align: center;
+    align-content: center;
+}
+
+main .paragraph-with-figure figure {
+    width: 100%;
+    margin: 0;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+main .paragraph-with-figure figure img {
+    width: 100%;
+}
+
+main .paragraph-with-figure p {
+    width: 100%;
+}
+
+
+.content {
+    display: flex;
+    gap: 12px;
+    justify-content: space-between;
+}
+
+
+.content aside {
+    margin: 8px 0;
+}
+.content aside section {
+    background: rgba(0, 0, 0, 0.1);
+    margin: 0 0 12px 0;
+}
+
+
+.content aside header {
+    background: rgba(0, 0, 0, 0.1);
+    margin: 0;
+    align-content: center;
+    text-align: center;
+}
+
+.anecdote p, .quote p {
+    font-family: "ru_Plainot", sans-serif;
+    margin: 0 12px;
+}
+
+
+.share-prices img {
+    height: 20px;
+    width: 20px;
+}
+
+.share-prices table {
+    text-align: center;
+    width: 100%
+}
+.calendar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.calendar img {
+    width: 200px;
+    height: 200px;
+    margin: 0;
+}
+
+
+
+.advertisement {
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    height: auto;
+    flex-wrap: wrap;
+}
+
+.advertisement header {
+    width: 40px;
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: space-around;
+}
+
+.advertisement header h3 {
+    font-size: 18px;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.advertisement div {
+    flex: 1;
+    background-color: rgba(255, 255, 255, 0.4);
+    display: flex;
+    text-align: center;
+}
+
+
+.advertisement div figure figcaption {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.4;
+    margin-top: 10px;
+}
+
+
+@media (max-width: 1005px) {
+    aside {
+        display: flex;
+        margin: 0;
+        flex-wrap: wrap;
+        gap: 12px;
+        justify-content: space-evenly;
+        align-items: stretch;
+        width: auto;
+    }
+    aside section {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .content {
+        flex-direction: column;
+    }
+
+    .content aside section {
+        width: 200px;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .main-header {
+        flex-direction: column;
+    }
+
+    .special-issue, .text-overlay {
+        flex-basis: auto;
+        width: 100%;
+    }
+
+    .logo-container {
+        margin: 16px 0;
+    }
+
+
+}
+
+@media (max-width: 595px) {
+
+    .advertisement header h3 {
+        writing-mode: horizontal-tb;
+        transform: rotate(0deg);
+    }
+
+    .advertisement {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: stretch;
+        height: auto;
+        flex-wrap: wrap;
+    }
+    .advertisement header {
+        width: 100%;
+        background: rgba(0, 0, 0, 0.3);
+        padding: 10px;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .robot-combat *,
+    .robot-concierge *{
+        width: 100%;
+    }
+    .subheader h1 {
+        font-size: 48px;
+    }
+    .subheader {
+        flex-wrap: wrap;
+    }
+    .content aside section {
+        width: 100%;
+    }
+
+}
+
+
+.robot-combat p {
+    font-family: "ru_Vinque_Rg", sans-serif;
+}
+
+.robot-concierge p {
+    font-family: "ru_Ireland", sans-serif;
+}
+
+.anecdote, .quote p {
+    font-family: "ru_Plainot", sans-serif;
+}
+
+
+@font-face {
+    font-family: 'ru_Vinque_Rg';
+    src: url('resources/ofont.ru_Vinque Rg.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'ru_Ireland';
+    src: url('resources/ofont.ru_Ireland.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'ru_Plainot';
+    src: url('resources/ofont.ru_Plainot.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'ru_Pixel';
+    src: url('resources/ofont.ru_Pixel Cyr.ttf') format('truetype');
+}
+
+.dancing-yellow-robot:hover, .dancing-white-robot:hover {
+    animation: spin-and-jump 0.5s infinite ease-in-out;
+}
+
+.buy-spare-parts img:hover {
+    display: inline-block;
+    animation: spin-and-jump 1s infinite ease-in-out;
+}
+
+@keyframes spin-and-jump {
+    0% {
+        transform: translateY(0) rotate(0deg) scale(100%);
+    }
+    25% {
+        transform: translateY(-30px) rotate(90deg) scale(75%);
+    }
+    50% {
+        transform: translateY(0) rotate(180deg) scale(50%);
+    }
+    75% {
+        transform: translateY(-30px) rotate(270deg) scale(75%);
+    }
+    100% {
+        transform: translateY(0) rotate(360deg) scale(100%);
+    }
+}
+
+q:hover {
+    animation: blink 5s infinite ease-in-out;
+}
+.text-overlay {
+    animation: blink 5s infinite ease-in-out;
+}
+
+@keyframes blink {
+    0% {
+        color: hsl(0, 100%, 50%);
+    }
+    16.67% {
+        color: hsl(60, 100%, 50%);
+    }
+    33.33% {
+        color: hsl(120, 100%, 50%);
+    }
+    50% {
+        color: hsl(180, 100%, 50%);
+    }
+    66.67% {
+        color: hsl(240, 100%, 50%);
+    }
+    83.33% {
+        color: hsl(300, 100%, 50%);
+    }
+    100% {
+        color: hsl(0, 100%, 50%);
+    }
+}
+
+img {
+    filter: grayscale(100%);
+}
+
+img:hover {
+    filter: grayscale(0%);
+}
